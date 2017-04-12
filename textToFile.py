@@ -1,3 +1,5 @@
+import os
+
 def textToFile(text):
 	title = ""
 	for t in text:
@@ -5,6 +7,8 @@ def textToFile(text):
 			title = title + t 
 		else:
 			break
+	os.mkdir(title)
+	os.chdir(title)
 	title = title + ".txt"
 	f = open(title,"w+")
 	f.write(text)
