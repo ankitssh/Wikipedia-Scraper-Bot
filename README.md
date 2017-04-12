@@ -8,4 +8,4 @@ A wikipedia scarper bot made in python
 * Create a separate file for the downloaded text
 * Divide the code among various modules
 
-* The Structure will look like=> Main.py, Scraper.py, Cleaner.py, downloadedTxt Folder
+* The Structure will look like=> Main.py, Scraper.py, Cleaner.py,TxtToFile.py, downloadedTxt Folder
