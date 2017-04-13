@@ -1,6 +1,6 @@
 import os
 
-def textToFile(title,text):
+def Text2File(title,text):
 	if not os.path.exists("DownloadedText"):
 		os.mkdir("DownloadedText")
 		os.chdir("DownloadedText")
