@@ -21,4 +21,4 @@ A wikipedia scraper bot made in python
 
 * The Structure will look like=> Main.py, Scraper.py, Cleaner.py,TxtToFile.py, downloadedTxt Folder
 
-The Scraper doesn't work correctly on pages that have quotes text in them. Needs to be fixed
+The Scraper doesn't work correctly on pages(like Illuminati) that have quotes text in them. Needs to be fixed
