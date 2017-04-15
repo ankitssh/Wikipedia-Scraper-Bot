@@ -10,7 +10,15 @@ A wikipedia scraper bot made in python
 
 * ~~Divide the code among various modules~~
 
-* Clean the scraped data
+* ~~Clean the scraped data~~
+
+* Add comments to the code
+
+* Handle the exceptions that could occur
+
+* Make a reddit bot out of it
+
 
 * The Structure will look like=> Main.py, Scraper.py, Cleaner.py,TxtToFile.py, downloadedTxt Folder
 
+The Scraper doesn't work correctly on pages that have quotes text in them. Needs to be fixed
