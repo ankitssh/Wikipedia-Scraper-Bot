@@ -22,7 +22,12 @@ class ScrapperClass:
         self.title=html2text.html2text(str(sourceCode.find("h1",{"id":"firstHeading"})))[2:]
         self.title=self.title.replace("\n\n","")
         paragraphRaw=str(sourceCode.find("div",{"id":"mw-content-text"}))
-        startIndex=paragraphRaw.index("<p>")
+        try:
+            startIndex=paragraphRaw.index("</table>\n<p>")
+        except ValueError:
+            startIndex=paragraphRaw.index("</div>\n<p>")
+            
+        
         endIndex=paragraphRaw.index('<div class="toc" id="toc">',startIndex)
         
         self.paragraph=html2text.html2text(paragraphRaw[startIndex:endIndex])

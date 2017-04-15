@@ -1,7 +1,8 @@
 from Scraper import ScrapperClass
 import Text2File
 
-#cleaner File remains to be used
+import Cleaner
+
 
 sc= ScrapperClass()
 myurl=sc.getUrl()
@@ -10,4 +11,6 @@ sc.scrapedContent(myreq)
 title=sc.getTitle()
 paragraph=sc.getParagraph()
 
+paragraph=Cleaner.textCleaner(paragraph)
+title=Cleaner.titleCleaner(title)
 Text2File.Text2File(title,paragraph)
