@@ -11,9 +11,13 @@ def Text2File(title,text):
 	os.chdir(title)
 	title = title + ".txt"
 
-	f = open(title,"wb")
-	f.write(text.encode("utf8"))
-
-
+	try:
+		f = open(title,"wb")
+		f.write(text.encode("utf8"))
+	except IOError:
+		print("Error Writing The File")
+	
 	f.close()
+
+	
 
