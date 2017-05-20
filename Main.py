@@ -6,11 +6,17 @@ import Cleaner
 
 sc= ScrapperClass()
 myurl=sc.getUrl()
-myreq=sc.getRequestToTheUrl(myurl)
-sc.scrapedContent(myreq)
-title=sc.getTitle()
-paragraph=sc.getParagraph()
 
-paragraph=Cleaner.textCleaner(paragraph)
-title=Cleaner.titleCleaner(title)
-Text2File.Text2File(title,paragraph)
+if(sc.validateUrl(myurl)):
+	myreq=sc.getRequestToTheUrl(myurl)
+	sc.scrapedContent(myreq)
+	title=sc.getTitle()
+	paragraph=sc.getParagraph()
+	paragraph=Cleaner.textCleaner(paragraph)
+	title=Cleaner.titleCleaner(title)
+	Text2File.Text2File(title,paragraph)
+else:
+	print("Enter Correct Wikipedia Url")
+	print(input())
+
+
