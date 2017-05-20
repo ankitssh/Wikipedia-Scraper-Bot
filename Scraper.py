@@ -1,5 +1,9 @@
-from bs4 import BeautifulSoup
-import requests,html2text
+try:
+    from bs4 import BeautifulSoup
+    import requests,html2text,validators
+except ImportError:
+    print("Please instll BeautifulSoup,Requests,Html2Text,Validators Module.")
+    print(input())
 
 class ScrapperClass:
     title=""
@@ -12,10 +16,11 @@ class ScrapperClass:
         return url
     @staticmethod
     def getRequestToTheUrl(url):
+    
         req=requests.get(url)
         return req
-        
-    
+  
+
     def scrapedContent(self,req):
         sourceCode=BeautifulSoup(req.text,"html.parser")
         
@@ -36,6 +41,17 @@ class ScrapperClass:
         return self.title
     def getParagraph(self):
         return self.paragraph
-       
+
+    @staticmethod
+    def validateUrl(url):
+        try:
+            return bool(validators.url(url).public)
+        except Exception as e:
+            isWiki = url.find("wikipedia.org")
+            if(isWiki != -1):
+                return True
+            else:
+                return False
+
 
 
