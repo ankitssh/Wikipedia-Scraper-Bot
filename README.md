@@ -14,7 +14,7 @@ A wikipedia scraper bot made in python
 
 * Add comments to the code
 
-* Handle the exceptions that could occur
+* ~~Handle the exceptions that could occur~~
 
 * Make a reddit bot out of it
 
