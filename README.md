@@ -1,5 +1,19 @@
 # Wikipedia-Scraper-Bot
-A wikipedia scraper bot made in python
+A wikipedia scraper bot made in python. Developed with Python 3.6.0 using Spyder.
+
+<b>Necessary Modules</b>
+
+* BeautifulSoup
+* Requests
+* Html2Text
+* Validators
+* OS
+* Regex
+
+<b>Installation</b>
+Install Python 3.6.0
+
+Clone the repository to your desktop. Run Main.py using CMD or Terminal by using the command `python Main.py`
 
 <b>To do</b>
 
