@@ -2,7 +2,7 @@ try:
     from bs4 import BeautifulSoup
     import requests,html2text,validators
 except ImportError:
-    print("Please instll BeautifulSoup,Requests,Html2Text,Validators Module.")
+    print("Please install BeautifulSoup,Requests,Html2Text,Validators Module.")
     print(input())
 
 class ScrapperClass:
