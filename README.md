@@ -11,7 +11,8 @@ A wikipedia scraper bot made in python. Developed with Python 3.6.0 using Spyder
 * Regex
 
 <b>Installation</b>
-Install Python 3.6.0
+
+First install Python 3.6.0
 
 Clone the repository to your desktop. Run Main.py using CMD or Terminal by using the command `python Main.py`
 
